@@ -62,7 +62,7 @@ class TopbarSearchFormComponent extends Component {
                   return (
                     <LocationAutocompleteInput
                       className={isMobile ? css.mobileInputRoot : desktopInputRootClass}
-                      iconClassName={isMobile ? css.mobileIcon : css.desktopIcon}
+                      iconClassName= {isMobile ? css.mobileIcon : css.desktopIcon}
                       inputClassName={isMobile ? css.mobileInput : css.desktopInput}
                       predictionsClassName={
                         isMobile ? css.mobilePredictions : css.desktopPredictions

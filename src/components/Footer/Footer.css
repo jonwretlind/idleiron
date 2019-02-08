@@ -135,7 +135,7 @@
 /* Desktop and Mobile: links to more information */
 .infoLinks {
   order: 2;
-  flex-basis: 165px;
+  flex-basis: 100%;
   margin-right: 24px;
   margin-bottom: 24px;
 
@@ -301,6 +301,10 @@
     color: var(--marketplaceColor);
     text-decoration: none;
   }
+}
+
+.bottomCopyright {
+  text-align: center;
 }
 
 .tosAndPrivacyMobile {

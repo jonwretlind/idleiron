@@ -45,9 +45,9 @@
   /* Layout for child components */
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
   padding: 0 12px 0 0;
+  align-items: flex-start;
+  justify-content: space-around;
 
   /* fill */
   background-color: var(--matterColorLight);
@@ -64,25 +64,33 @@
 .logoLink {
   @apply --TopbarDesktop_linkHover;
   flex-shrink: 0;
-  padding: 21px 24px 21px 24px;
+  padding: 21px 0 21px 0;
   height: 100%;
+  font-size: 1.3rem;
+  letter-spacing: -1px;
+  font-weight: 800 !important;
+  flex: auto;
+  max-width: 200px;
+  flex-basis: 100%;
 
   @media (min-width: 1024px) {
-    padding: 21px 36px 21px 36px;
+    padding: 26px 20px 20px 20px;
+  }
+
+  & span {
+    /* If height is increased, change link paddings accordingly */
+    height: 27px;
+
+    /* Good aspect ratio should be less than 160/27 (width/height) */
+    /* NOTE: extremely wide logos, need special handling. */
+    width: 100%;
+    text-align: center;
+    display: block;
+    object-fit: contain;
+    object-position: center;
   }
 }
 
-.logo {
-  /* If height is increased, change link paddings accordingly */
-  height: 27px;
-
-  /* Good aspect ratio should be less than 160/27 (width/height) */
-  /* NOTE: extremely wide logos, need special handling. */
-  width: auto;
-  max-width: 220px;
-  object-fit: contain;
-  object-position: left center;
-}
 
 /* Search */
 .searchLink {
@@ -120,10 +128,13 @@
 
   flex-shrink: 0;
   height: 100%;
-  padding: 0 12px 0 12px;
-  color: var(--marketplaceColor);
+  padding: 0 0 0 0;
+  color: #fff;
+  background-color: var(--marketplaceColor);
   margin-top: 0;
   margin-bottom: 0;
+  border-radius: 50px;
+  border: 15px solid white;
 
   &:hover {
     color: var(--marketplaceColorDark);
@@ -137,6 +148,7 @@
 
 .createListing {
   @apply --TopbarDesktop_label;
+  margin: 9px 20px;
 }
 
 /* Inbox */
@@ -256,10 +268,29 @@
   }
 }
 
+.aboutLink, .contactLink, .inviteLink {
+  @apply --TopbarDesktop_linkHover;
+  flex-shrink: 0;
+  height: 100%;
+  padding: 21px 12px 21px 12px;
+
+  color: var(--matterColor);
+
+  &:hover {
+    color: var(--matterColorDark);
+  }
+}
+
 .signup,
-.login {
+.login, .about {
   @apply --marketplaceH4FontStyles;
   @apply --TopbarDesktop_label;
+}
+
+/* The links for static pages */
+.pageLinks {
+  flex-basis: 100%;
+  width: 100%;
 }
 
 /* left animated "border" like hover element */

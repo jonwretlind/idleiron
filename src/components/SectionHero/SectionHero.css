@@ -41,8 +41,6 @@
 
 .root {
   @apply --backgroundImage;
-  display: flex;
-  flex-direction: column;
   width: 100%;
   height: 100%;
 
@@ -50,7 +48,13 @@
 }
 
 .heroContent {
-  margin: 0 24px 0 24px;
+  margin: 10% 24px 0 24px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+	 text-align: center;
 
   @media (--viewportMedium) {
     margin: 0 7.5vw 0 7.5vw;
@@ -59,11 +63,11 @@
   /* Special viewport for adjusting the heroContent's placement */
 
   @media only screen and (min-width: 1025px) and (max-width: 1366px) {
-    padding: 0 36px 0 36px;
+    padding: 10% 36px 0 36px;
   }
 
   @media only screen and (min-width: 1367px) {
-    margin: 0 auto;
+    margin: 10% auto;
     max-width: calc(1052px + 36px + 36px);
     width: 100%;
     padding: 0 36px 0 36px;
@@ -78,13 +82,13 @@
   animation-delay: 0.5s;
 
   @media (--viewportMedium) {
-    max-width: var(--SectionHero_desktopTitleMaxWidth);
+    /* max-width: var(--SectionHero_desktopTitleMaxWidth); */
   }
 }
 
 .heroSubTitle {
   @apply --marketplaceBodyFontStyles;
-
+  font-size: 1.2rem;
   color: var(--matterColorLight);
   margin: 0 0 32px 0;
 
@@ -92,7 +96,7 @@
   animation-delay: 0.65s;
 
   @media (--viewportMedium) {
-    max-width: var(--SectionHero_desktopTitleMaxWidth);
+   /* max-width: var(--SectionHero_desktopTitleMaxWidth); */
     margin: 0 0 63px 0;
   }
 }
@@ -107,4 +111,12 @@
     display: block;
     width: 260px;
   }
+}
+
+/* MY CUSTOM ADDITION */
+.heroSearchForm {
+	display: block;
+	background-color: var(--marketplaceColor);
+	border-radius: 50px;
+	color: white;
 }

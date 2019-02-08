@@ -6,7 +6,9 @@ import {
   ContactDetailsPage,
   EditListingPage,
   EmailVerificationPage,
+  HowItWorksPage,
   InboxPage,
+  InviteNewMembersPage,
   LandingPage,
   ListingPage,
   ManageListingsPage,
@@ -54,6 +56,16 @@ const routeConfiguration = () => {
       path: '/about',
       name: 'AboutPage',
       component: AboutPage,
+    },
+    {
+      path: '/how',
+      name: 'HowItWorksPage',
+      component: HowItWorksPage,
+    },
+    {
+      path: '/invite',
+      name: 'InviteNewMembersPage',
+      component: InviteNewMembersPage,
     },
     {
       path: '/s',

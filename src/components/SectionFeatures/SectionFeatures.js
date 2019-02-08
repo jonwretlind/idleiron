@@ -1,0 +1,18 @@
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+
+import css from './SectionFeatures.css';
+
+const SectionFeatures = props => {
+  const { options, selectedOptions } = props;
+  return (
+    <div className={css.sectionFeatures}>
+      <h1 className={css.title}>
+        <FormattedMessage id="SectionFeatures.featuresTitle" />
+      </h1>
+     
+    </div>
+  );
+};
+
+export default SectionFeatures;

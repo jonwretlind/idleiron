@@ -1,0 +1,11 @@
+@import '../../marketplace.css';
+
+.logoMobile {
+  & path {
+    fill: var(--marketplaceColor);
+  }
+}
+
+.TopbarDesktop__logo__wNGRJ {
+	font-weight: 700 !important;
+}

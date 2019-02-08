@@ -2,11 +2,29 @@ import React from 'react';
 import { string } from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
-import { NamedLink } from '../../components';
+
+import { TopbarSearchForm } from '../../forms';
 
 import css from './SectionHero.css';
 
+
+
 const SectionHero = props => {
+
+	const {
+    onSearchSubmit,
+    initialSearchFormValues,
+  } = props;
+
+  const search = (
+    <TopbarSearchForm
+      className={css.heroSearchForm}
+      form="TopbarSearchFormDesktop"
+      onSubmit={onSearchSubmit}
+      initialValues={initialSearchFormValues}
+    />
+  );
+
   const { rootClassName, className } = props;
 
   const classes = classNames(rootClassName || css.root, className);
@@ -20,16 +38,7 @@ const SectionHero = props => {
         <h2 className={css.heroSubTitle}>
           <FormattedMessage id="SectionHero.subTitle" />
         </h2>
-        <NamedLink
-          name="SearchPage"
-          to={{
-            search:
-              's?address=Finland&bounds=70.0922932%2C31.5870999%2C59.693623%2C20.456500199999937',
-          }}
-          className={css.heroButton}
-        >
-          <FormattedMessage id="SectionHero.browseButton" />
-        </NamedLink>
+        { search }
       </div>
     </div>
   );

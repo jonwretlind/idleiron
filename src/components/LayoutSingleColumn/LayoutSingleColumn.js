@@ -1,11 +1,11 @@
 /**
  * LayoutSingleColumn needs to have 3-4 children:
- * LayoutWrapperTopbar, LayoutWrapperSideNav, LayoutWrapperMain, and possibly LayoutWrapperFooter.
+ * LayoutWrapperTopbar, LayoutBanner, LayoutWrapperSideNav, LayoutWrapperMain, and possibly LayoutWrapperFooter.
  */
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { LayoutWrapperTopbar, LayoutWrapperMain, LayoutWrapperFooter } from '../../components';
+import { LayoutWrapperTopbar, LayoutBanner, LayoutWrapperMain, LayoutWrapperFooter } from '../../components';
 
 import css from './LayoutSingleColumn.css';
 
@@ -14,7 +14,7 @@ const prepareChildren = children => {
   if (!(childrenCount === 3 || childrenCount === 4)) {
     throw new Error(
       `Menu needs to have 2 - 3 children:
-      LayoutWrapperTopbar, and LayoutWrapperMain,
+      LayoutWrapperTopbar, LayoutBanner, and LayoutWrapperMain,
       and optionally LayoutWrapperFooter.`
     );
   }
@@ -24,6 +24,8 @@ const prepareChildren = children => {
   React.Children.forEach(children, child => {
     if (child.type === LayoutWrapperTopbar) {
       childrenMap.layoutWrapperTopbar = child;
+    } else if (child.type === LayoutBanner) {
+      childrenMap.layoutBanner = child;
     } else if (child.type === LayoutWrapperMain) {
       // LayoutWrapperMain needs different rootClassName
       const childWithAddedCSS = React.cloneElement(child, {
@@ -35,7 +37,7 @@ const prepareChildren = children => {
     } else {
       throw new Error(
         `LayoutSingleColumn has an unknown child.
-      Only LayoutWrapperTopbar, LayoutWrapperMain, LayoutWrapperFooter are allowed.`
+      Only LayoutWrapperTopbar, LayourBanner, LayoutWrapperMain, LayoutWrapperFooter are allowed.`
       );
     }
   });
@@ -51,6 +53,7 @@ const LayoutSingleColumn = props => {
   return (
     <div className={classes}>
       {preparedChildren.layoutWrapperTopbar}
+      {preparedChildren.layoutBanner}
       {preparedChildren.layoutWrapperMain}
       {maybeFooter}
     </div>
