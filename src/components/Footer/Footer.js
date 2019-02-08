@@ -72,11 +72,7 @@ const Footer = props => {
                 <p className={css.organizationDescription}>
                   <FormattedMessage id="Footer.organizationDescription" />
                 </p>
-                <p className={css.organizationCopyright}>
-                  <NamedLink name="LandingPage" className={css.copyrightLink}>
-                    <FormattedMessage id="Footer.copyright" />
-                  </NamedLink>
-                </p>
+
               </div>
             </div>
             <div className={css.infoLinks}>
@@ -96,6 +92,10 @@ const Footer = props => {
                     <FormattedMessage id="Footer.toFAQPage" />
                   </NamedLink>
                 </li>
+              </ul>
+            </div>
+            <div className={css.infoLinks}>
+              <ul className={css.list}>
                 <li className={css.listItem}>
                   <NamedLink name="LandingPage" className={css.link}>
                     <FormattedMessage id="Footer.toHelpPage" />
@@ -108,7 +108,7 @@ const Footer = props => {
                 </li>
               </ul>
             </div>
-            <div className={css.searches}>
+            {/* <div className={css.searches}>
               <ul className={css.list}>
                 <li className={css.listItem}>
                   <NamedLink
@@ -235,7 +235,7 @@ const Footer = props => {
                   </NamedLink>
                 </li>
               </ul>
-            </div>
+            </div> */}
             <div className={css.extraLinks}>
               <div className={css.someLinks}>{socialMediaLinks}</div>
               <div className={css.legalMatters}>
@@ -253,6 +253,13 @@ const Footer = props => {
                 </ul>
               </div>
             </div>
+          </div>
+          <div className={css.bottomCopyright}>
+            <p className={css.organizationCopyright}>
+              <NamedLink name="LandingPage" className={css.copyrightLink}>
+                <FormattedMessage id="Footer.copyright" />
+              </NamedLink>
+            </p>
           </div>
           <div className={css.copyrightAndTermsMobile}>
             <NamedLink name="LandingPage" className={css.organizationCopyrightMobile}>

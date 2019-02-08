@@ -81,6 +81,21 @@
   }
 }
 
+.specialSection {
+   background-color: var(--marketplaceSecondaryColor);
+   padding: 40px;
+   color: white;
+}
+
+.contentSection {
+   padding: 0 40px 0 40px;
+}
+
+.contentSection2 {
+   padding: 40px;
+   background-color: #eee;
+}
+
 .sectionContent {
   margin: var(--LandingPage_sectionMarginTop) 24px 51px 24px;
 

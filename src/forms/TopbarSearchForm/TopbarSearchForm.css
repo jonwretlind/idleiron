@@ -29,7 +29,7 @@
 
 .mobileIcon {
   margin-left: 24px;
-  padding: 11px 0 17px 0;
+  padding: 11px 0 17px 0px;
 
   /* Borders */
   border-bottom-width: var(--borderRadiusMobileSearch);
@@ -75,7 +75,8 @@
   display: flex;
   width: 24px;
   align-self: stretch;
-  background-color: var(--matterColorLight);
+  background-color: transparent;
+  margin-left: 14px;
 }
 
 .desktopInput {

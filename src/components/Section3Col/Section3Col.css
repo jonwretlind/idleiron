@@ -1,0 +1,224 @@
+@import '../../marketplace.css';
+
+.root {
+}
+
+.pageRoot {
+  display: flex;
+  padding-bottom: 90px;
+  @media (--viewportLarge) {
+    padding-bottom: 0;
+  }
+}
+
+
+.sectionImages {
+}
+
+.threeToTwoWrapper {
+  /* Layout */
+  display: block;
+  width: 100%;
+  position: relative;
+
+  @media (--viewportMedium) {
+    padding: 0;
+  }
+
+  @media (--viewportLarge) {
+    padding: 36px 36px 0 36px;
+  }
+}
+
+/* Firefox doesn't support image aspect ratio inside flexbox */
+.aspectWrapper {
+  position: relative; /* allow positioning own listing action bar */
+  padding-bottom: 66.6667%; /* 3:2 Aspect Ratio */
+  background-color: var(--matterColorNegative); /* Loading BG color */
+
+  /* Image carousel can be opened from the image, therefore we should show a pointer */
+  cursor: pointer;
+
+  @media (--viewportMedium) {
+    padding-bottom: 0; /* No fixed aspect on desktop layouts */
+  }
+}
+
+.rootForImage {
+  /* Layout - image will take space defined by aspect ratio wrapper */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+
+  transition: var(--transitionStyleButton);
+
+  @media (--viewportMedium) {
+    position: static;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    height: calc(0.41 * 100vw);
+    max-height: 50vh;
+    object-fit: cover;
+    border-radius: var(--borderRadius);
+
+    &:hover {
+      transform: scale(1.005);
+      box-shadow: var(--boxShadowListingCard);
+    }
+  }
+}
+
+.viewPhotos {
+  @apply --marketplaceTinyFontStyles;
+  font-weight: var(--fontWeightMedium);
+
+  /* Position and dimensions */
+  position: absolute;
+  bottom: 19px;
+  right: 24px;
+  margin: 0;
+  padding: 6px 13px 8px 13px;
+
+  /* Colors */
+  background-color: var(--matterColorLight);
+
+  /* Borders */
+  border: none;
+  border-radius: var(--borderRadius);
+
+  cursor: pointer;
+  transition: var(--transitionStyleButton);
+
+  &:hover {
+    background-color: var(--marketplaceColor);
+    color: var(--matterColorLight);
+  }
+
+  @media (--viewportMedium) {
+    margin: 0;
+  }
+}
+
+
+.contentContainer {
+  @media (--viewportMedium) {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: flex;
+    position: relative;
+  }
+
+  @media (--viewportLarge) {
+    margin: 0 auto 117px;
+  }
+}
+
+.mainContent {
+  flex-basis: 100%;
+  margin-bottom: 23px;
+
+  @media (--viewportMedium) {
+    margin-top: 50px;
+    margin-bottom: 51px;
+    flex-shrink: 0;
+  }
+
+  @media (--viewportLarge) {
+    margin-top: 50px;
+    margin-bottom: 0px;
+    /* contentContainer's full width - (bookingColumn + two paddings + margin + border) */
+    flex-basis: calc(100% - 493px);
+    flex-shrink: 0;
+  }
+}
+
+.heading {
+  margin-bottom: 33px;
+  padding: 0 24px;
+
+  @media (--viewportMedium) {
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+.title {
+  /* Font */
+  @apply --marketplaceH1FontStyles;
+  font-weight: var(--fontWeightRegular);
+
+  /* Layout */
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  @media (--viewportMedium) {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+}
+
+
+.textContent {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 0;
+  text-align: center;
+
+  /* Preserve newlines, but collapse other whitespace */
+  white-space: pre-line;
+
+  @media (--viewportMedium) {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+}
+
+
+.columnWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.col1, .col2, .col3 {
+  text-align: center;
+  margin: 40px;
+  width: 30%;
+}
+
+.col1 p, .col2 p, .col3 p {
+  line-height: 1.2;
+  font-size: .9rem;
+}
+
+.colButton {
+  margin: 40px auto;
+  border-radius: 50px;
+  max-width: 200px;
+  background-color: white;
+  border: 3px solid var(--marketplaceColor);
+  color: var(--marketplaceColor);
+  padding: 5px;
+  font-size: .8rem;
+}
+
+.colButton:hover {
+  background-color: var(--marketplaceColor);
+  color: white;
+}
+
+.icon svg {
+  height: 60px;
+}
+
+.icon g {
+  stroke: var(--marketplaceColor);
+}

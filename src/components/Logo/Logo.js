@@ -4,18 +4,19 @@ import classNames from 'classnames';
 
 import config from '../../config';
 import IconLogo from './IconLogo';
-import LogoImage from './saunatime-logo.png';
+//import LogoImage from './saunatime-logo.png';
 import css from './Logo.css';
 
 const Logo = props => {
-  const { className, format, ...rest } = props;
+  const { className, format } = props;
   const mobileClasses = classNames(css.logoMobile, className);
 
   if (format === 'desktop') {
-    return <img className={className} src={LogoImage} alt={config.siteTitle} {...rest} />;
+    return <IconLogo alt={config.siteTitle} />;
+   // return <img className={className} src={LogoImage} alt={config.siteTitle} {...rest} />;
   }
 
-  return <IconLogo className={mobileClasses} {...rest} />;
+  return <IconLogo className={mobileClasses}/>;
 };
 
 const { oneOf, string } = PropTypes;

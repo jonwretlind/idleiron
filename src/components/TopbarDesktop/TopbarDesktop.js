@@ -14,6 +14,7 @@ import {
   MenuItem,
   NamedLink,
 } from '../../components';
+
 import { TopbarSearchForm } from '../../forms';
 
 import css from './TopbarDesktop.css';
@@ -125,25 +126,59 @@ const TopbarDesktop = props => {
     </NamedLink>
   );
 
+  const aboutLink = (
+    <NamedLink name="AboutPage" className={css.aboutLink}>
+      <span className={css.about}>
+        <FormattedMessage id="TopbarDesktop.about" />
+      </span>
+    </NamedLink>
+  );
+
+  const contactLink = (
+    <NamedLink name="ContactDetailsPage" className={css.contactLink}>
+      <span className={css.about}>
+        <FormattedMessage id="TopbarDesktop.contact" />
+      </span>
+    </NamedLink>
+  );
+
+  const inviteLink = (
+    <NamedLink name="InviteNewMembersPage" className={css.inviteLink}>
+      <span className={css.about}>
+        <FormattedMessage id="TopbarDesktop.invite" />
+      </span>
+    </NamedLink>
+  );
+
+  const logo = (
+    <NamedLink className={css.logoLink} name="LandingPage">
+      <Logo
+        format="desktop"
+        alt={intl.formatMessage({ id: 'TopbarDesktop.logo' })}
+      />
+    </NamedLink>
+  );
+
   return (
     <nav className={classes}>
-      <NamedLink className={css.logoLink} name="LandingPage">
-        <Logo
-          format="desktop"
-          className={css.logo}
-          alt={intl.formatMessage({ id: 'TopbarDesktop.logo' })}
-        />
-      </NamedLink>
-      {search}
+      {logo}
+
+      <div className={css.pageLinks}>
+      {aboutLink}
+      {contactLink}
+      {inviteLink}
+      </div>
+
+      {inboxLink}
+      {profileMenu}
+      {signupLink}
+      {loginLink}
+
       <NamedLink className={css.createListingLink} name="NewListingPage">
         <span className={css.createListing}>
           <FormattedMessage id="TopbarDesktop.createListing" />
         </span>
       </NamedLink>
-      {inboxLink}
-      {profileMenu}
-      {signupLink}
-      {loginLink}
     </nav>
   );
 };
@@ -162,15 +197,15 @@ TopbarDesktop.defaultProps = {
 TopbarDesktop.propTypes = {
   rootClassName: string,
   className: string,
-  currentUserHasListings: bool.isRequired,
+  currentUserHasListings: bool,
   currentUser: propTypes.currentUser,
   currentPage: string,
-  isAuthenticated: bool.isRequired,
-  onLogout: func.isRequired,
+  isAuthenticated: bool,
+  onLogout: func,
   notificationCount: number,
-  onSearchSubmit: func.isRequired,
+  onSearchSubmit: func,
   initialSearchFormValues: object,
-  intl: intlShape.isRequired,
+  intl: intlShape,
 };
 
 export default TopbarDesktop;

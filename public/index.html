@@ -19,60 +19,18 @@
     <meta name="msapplication-config" content="/static/icons/browserconfig.xml">
     <meta name="theme-color" content="#c0392b">
     <!-- End Favicons -->
-
-    <!--!link-->
-
-    <style>
-     /**
-      * The fonts included are copyrighted by the vendor listed below.
-      *
-      * Vendor:      Mostardesign
-      * License URL: https://www.fontspring.com/licenses/mostardesign/webfont
-      *
-      */
-
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <style type="text/css" rel="stylesheet">
       @font-face {
-        /* 'SofiaPro-Regular' */
-        font-family: 'sofiapro';
-        src: url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-regular-webfont.woff2') format('woff2'),
-             url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-regular-webfont.woff') format('woff');
-        font-weight: 400; /* Regular */
-        font-style: normal;
-      }
-
-      @font-face {
-          font-family: 'sofiapro';
-          src: url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-medium-webfont.woff2') format('woff2'),
-               url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-medium-webfont.woff') format('woff');
-          font-weight: 500; /* Medium */
+          font-family: 'ss_pika';
+          src: url('/static/fonts/ss_pika.woff') format('woff'),
+               url('/static/fonts/ss_pika.eot') format('opentype'),
+               url('/static/fonts/ss_pika.ttf') format('truetype');
+          font-weight: normal;
           font-style: normal;
       }
-
-      @font-face {
-          font-family: 'sofiapro';
-          src: url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-mediumit-webfont.woff2') format('woff2'),
-               url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-mediumit-webfont.woff') format('woff');
-          font-weight: 500; /* Medium italics */
-          font-style: italic;
-      }
-
-      @font-face {
-          font-family: 'sofiapro';
-          src: url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-semibold-webfont.woff2') format('woff2'),
-               url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-semibold-webfont.woff') format('woff');
-          font-weight: 600; /* SemiBold */
-          font-style: normal;
-      }
-
-      @font-face {
-          font-family: 'sofiapro';
-          src: url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-bold-webfont.woff2') format('woff2'),
-               url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-bold-webfont.woff') format('woff');
-          font-weight: 700; /* Bold */
-          font-style: normal;
-      }
-
     </style>
+    <!--!link-->
     <script>
       (function(document){
         // Optimization for repeated views
@@ -117,10 +75,10 @@
 
 
         // Fonts we use (Check font-face rules from <style> tag in <head> section)
-        var sofiaproRegular = new FontFaceObserver('sofiapro', { weight: 400 });
-        var sofiaproMedium = new FontFaceObserver('sofiapro', { weight: 500 });
-        var sofiaproSemibold = new FontFaceObserver('sofiapro', { weight: 600 });
-        var sofiaproBold = new FontFaceObserver('sofiapro', { weight: 700 });
+        var sofiaproRegular = new FontFaceObserver('Nunito', { weight: 400 });
+        var sofiaproMedium = new FontFaceObserver('Nunito', { weight: 500 });
+        var sofiaproSemibold = new FontFaceObserver('Nunito', { weight: 600 });
+        var sofiaproBold = new FontFaceObserver('Nunito', { weight: 700 });
 
         var fontLoadingTimeout = 5000;
 

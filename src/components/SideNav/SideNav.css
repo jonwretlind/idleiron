@@ -1,0 +1,78 @@
+:root {
+  --active: #eee;
+  --hoverText: #666;
+  --hoverActive: #ddd;
+}
+
+
+
+.sideMenu li {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  display: block;
+  margin: 5px 0;
+
+  & a[class*="NamedLink_active"] {
+      background-color: var(--active);
+    }
+}
+
+
+.sideLink {
+  background-color: #fff;
+  border-radius: 4px;
+  width: 100%;
+  padding: 5px 0px 5px 30px;
+  display: block;
+  margin-bottom: 10px;
+
+  &:hover {
+    text-decoration: none;
+    background-color: var(--hoverActive) !important;
+    color: var(--hoverText);
+  }
+}
+
+
+
+
+
+.ssicon:before {
+    font-family: "ss_pika";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    white-space: nowrap;
+    font-size: 1rem;
+    color: #ffcc00;
+
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    -o-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+
+    position: absolute;
+    margin-top: 0.35em;
+    padding-left: 5px;
+}
+
+.infoIcon:before {
+  content: 'ℹ';
+}
+
+.howIcon:before {
+  content: '';
+}
+
+.privacyIcon:before {
+  content: '';
+}
+
+.termsIcon:before {
+  content: '';
+}
