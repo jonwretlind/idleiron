@@ -17,9 +17,11 @@ const ListingCard = () => {
  .then(response => {
    // Print listing titles
    response.data.data.forEach(function(listing, idx) {
-     console.log("Idx: " + idx, listing);
+    console.log("Idx: " + idx, listing);
 
-    Cards += "<div class="+ css.card +">"+ listing.attributes.title +
+    const cardStyle = "color:#555;";
+
+    Cards += "<div style="+cardStyle+">"+ listing.attributes.title +
                 "<span className="+ css.price +">"+ listing.attributes.price.amount +"</span>" +
                 "<span className="+ css.location +">"+ listing.attributes.publicData.location.address +"</span>" +
              "</div>";
@@ -35,7 +37,6 @@ const ListingCard = () => {
    console.log(`Request failed with status: ${response.status} ${response.statusText}`);
  });
 
-{/* NOTE: Styles are referenced from SectionFeatures.css */}
  return (
    <div id="myListings" className={css.featuresContainer} />
  )
