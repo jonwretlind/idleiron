@@ -5,7 +5,7 @@ import { Button } from '../../components';
 import css from './Section2Col.css';
 
 const Section2Col = props => {
-  const { options, selectedOptions } = props;
+  //const { options, selectedOptions } = props;
   return (
     <div className={css.Section2Col}>
       <h1 className={css.title}>

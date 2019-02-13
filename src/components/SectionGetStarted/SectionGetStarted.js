@@ -5,7 +5,7 @@ import { Button } from '../../components';
 import css from './SectionGetStarted.css';
 
 const SectionGetStarted = props => {
-  const { options, selectedOptions } = props;
+  //const { options, selectedOptions } = props;
   return (
     <div className={css.SectionGetStarted}>
       <h1 className={css.title}>

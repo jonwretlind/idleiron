@@ -1,5 +1,4 @@
 import React from 'react';
-import config from '../../config';
 import { FormattedMessage } from 'react-intl';
 import {
   NamedLink,
@@ -8,7 +7,7 @@ import {
 import css from './SideNav.css';
 
 const SideNav = () => {
-  
+
     const aboutLink = (
       <NamedLink name="AboutPage" className={css.sideLink}>
           <FormattedMessage id="sideNav.about" />

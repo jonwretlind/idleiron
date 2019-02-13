@@ -1,8 +1,8 @@
 import React from 'react';
-import config from '../../config';
-import { twitterPageURL } from '../../util/urlHelpers';
+//import config from '../../config';
+//import { twitterPageURL } from '../../util/urlHelpers';
 import { StaticPage, TopbarContainer } from '../../containers';
-import { FormattedMessage } from 'react-intl';
+//import { FormattedMessage } from 'react-intl';
 import {
   LayoutSingleColumn,
   LayoutBanner,
@@ -10,8 +10,8 @@ import {
   LayoutWrapperMain,
   LayoutWrapperFooter,
   Footer,
-  ExternalLink,
-  NamedLink,
+  //ExternalLink,
+  //NamedLink,
   SideNav,
 } from '../../components';
 
@@ -19,8 +19,8 @@ import css from './AboutPage.css';
 import image from './default-7f90b47ba0369f4d8a979491ad6478da4f409e13f1e077aae3c4908d9f021627.jpg';
 
 const AboutPage = () => {
-  const { siteTwitterHandle, siteFacebookPage } = config;
-  const siteTwitterPage = twitterPageURL(siteTwitterHandle);
+  //const { siteTwitterHandle, siteFacebookPage } = config;
+  //const siteTwitterPage = twitterPageURL(siteTwitterHandle);
 
 const bannerStyle = {
   backgroundImage: 'url(' + image + ')',

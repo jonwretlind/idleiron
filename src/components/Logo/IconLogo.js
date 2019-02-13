@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const IconLogo = props => {
-  const { className, ...rest } = props;
+  //const { className } = props;
 
   return (
     <span className="logo">IDLE IRON</span>

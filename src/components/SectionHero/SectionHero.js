@@ -1,5 +1,5 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, func, object } from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 
@@ -49,6 +49,8 @@ SectionHero.defaultProps = { rootClassName: null, className: null };
 SectionHero.propTypes = {
   rootClassName: string,
   className: string,
+  onSearchSubmit: func,
+  initialSearchFormValues: object,
 };
 
 export default SectionHero;
